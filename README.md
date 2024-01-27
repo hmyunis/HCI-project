@@ -6,8 +6,11 @@
 2. Proper focus on user needs
 3. Design consistancy for the links
 4. Correction to the sidbar
-5. Larg and distinct fonts
+5. Large and distinct fonts
 6. Removal of useless elements on screen
+7. Proper grouping of content
+8. Titles for Abbrivations
+9.
 
 ### Improvements made to the existing interface:
 

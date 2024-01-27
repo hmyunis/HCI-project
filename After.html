@@ -7,10 +7,18 @@
     <link rel="shortcut icon" href="https://pecl.php.net/favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./AfterSrc/styles.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body class="h-screen">
-    <header class="bg-purple-900 text-white">
-      <nav class="flex">
+    <header class="bg-purple-900">
+      <div class="text-white flex items-center justify-between w-[92%] mx-auto">
         <div>
           <a href="https://pecl.php.net/"
             ><img
@@ -22,90 +30,105 @@
           /></a>
         </div>
 
-        <ul>
-          <li class="blockRelatives">
-            <a
-              class="hover:text-gray-500 blockCentralA"
-              href="https://pecl.php.net/"
-              >Home</a
-            >
-          </li>
-
-          <li class="blockRelatives">
-            <a
-              class="hover:text-gray-500 dropdownLinks flex items-center gap-2"
-              href="https://pecl.php.net/news/"
-              >News Section
-              <img class="w-3" src="./AfterSrc/images/dropdown.png" alt="..."
-            /></a>
-            <ul class="dropdown">
-              <li class="blockRelatives">
-                <a
-                  class="blockCentralA"
-                  href="https://pecl.php.net/doc/index.php"
-                  >Document</a
-                >
-              </li>
-              <li class="blockRelatives">
-                <a
-                  class="blockCentralA"
-                  href="https://pecl.php.net/package-stats.php"
-                  >Status</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="blockRelatives">
-            <a
-              class="hover:text-gray-500 dropdownLinks flex items-center gap-2"
-              href="https://pecl.php.net/packages.php"
-              >Packages
-              <img class="w-3" src="./AfterSrc/images/dropdown.png" alt="..."
-            /></a>
-            <ul class="dropdown">
-              <li class="blockRelatives">
-                <a
-                  class="blockCentralA"
-                  href="https://pecl.php.net/packages.php"
-                  >All</a
-                >
-              </li>
-              <li class="blockRelatives">
-                <a
-                  class="blockCentralA"
-                  href="https://pecl.php.net/account-request.php"
-                  >Add</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="blockRelatives">
-            <a
-              class="hover:text-gray-500 blockCentralA"
-              href="https://pecl.php.net/support.php"
-              >Support</a
-            >
-          </li>
-          <li class="blockRelatives">
-            <a
-              class="hover:text-gray-500 blockCentralA"
-              href="https://pecl.php.net/bugs/"
-              >Bugs</a
-            >
-          </li>
-        </ul>
-
-        <button
-          class="flex mt-[10px] text-[20px] absolute right-4 border-2 rounded-full w-[100px] grid justify-center items-center hover:bg-purple-300 hover:text-black"
+        <nav
+          class="hidde md:flex md:static absolute top-[-100%] left-0 bg-purple-900 w-full justify-center"
+          id="nav-menu"
         >
-          <a href="https://pecl.php.net/login.php">Login</a>
-        </button>
-      </nav>
+          <ul class="flex flex-wrap flex-col md:flex-row">
+            <li class="blockRelatives">
+              <a
+                class="hover:text-gray-500 blockCentralA"
+                href="https://pecl.php.net/"
+                >Home</a
+              >
+            </li>
+
+            <li class="blockRelatives">
+              <a
+                class="hover:text-gray-500 dropdownLinks flex items-center gap-2 justify-center"
+                href="https://pecl.php.net/news/"
+                >News Section
+                <img class="w-3" src="./AfterSrc/images/dropdown.png" alt="..."
+              /></a>
+              <ul class="dropdown">
+                <li class="blockRelatives">
+                  <a
+                    class="blockCentralA"
+                    href="https://pecl.php.net/doc/index.php"
+                    >Document</a
+                  >
+                </li>
+                <li class="blockRelatives">
+                  <a
+                    class="blockCentralA"
+                    href="https://pecl.php.net/package-stats.php"
+                    >Status</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="blockRelatives">
+              <a
+                class="hover:text-gray-500 dropdownLinks flex items-center gap-2 justify-center"
+                href="https://pecl.php.net/packages.php"
+                >Packages
+                <img class="w-3" src="./AfterSrc/images/dropdown.png" alt="..."
+              /></a>
+              <ul class="dropdown">
+                <li class="blockRelatives">
+                  <a
+                    class="blockCentralA"
+                    href="https://pecl.php.net/packages.php"
+                    >All</a
+                  >
+                </li>
+                <li class="blockRelatives">
+                  <a
+                    class="blockCentralA"
+                    href="https://pecl.php.net/account-request.php"
+                    >Add</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="blockRelatives">
+              <a
+                class="hover:text-gray-500 blockCentralA"
+                href="https://pecl.php.net/support.php"
+                >Support</a
+              >
+            </li>
+
+            <li class="blockRelatives">
+              <a
+                class="hover:text-gray-500 blockCentralA"
+                href="https://pecl.php.net/bugs/"
+                >Bugs</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center">
+          <button
+            class="text-[20px] border-2 rounded-full w-[100px] grid justify-center items-center hover:bg-purple-300 hover:text-black"
+          >
+            <a href="https://pecl.php.net/login.php">Login</a>
+          </button>
+
+          <ion-icon
+            name="menu"
+            class="ml-3 text-2xl flex md:hidden hover:cursor-pointer"
+            onclick="togglerMenu(this)"
+          ></ion-icon>
+        </div>
+      </div>
     </header>
 
     <main>
-      <aside class="bg-gray-300 grid items-center">
+      <aside class="hidden bg-gray-300 md:grid items-center">
         <ul class="grid gap-2 m-3">
           <li class="text-center text-[20px] font-bold underline">
             Recent Releases
@@ -169,7 +192,7 @@
             <a
               class="text-blue-500 hover:text-purple-600 underline"
               href="https://pecl.php.net/feeds/"
-              >Syndicate this</a
+              >Organize this</a
             >
           </li>
         </ul>
@@ -177,7 +200,7 @@
 
       <article class="grid items-center">
         <div class="grid bg-blue-100 self-start py-5">
-          <h1 class="text-[40px] text-center font-bold">
+          <h1 class="text-[25px] md:text-[40px] text-center font-bold">
             Finding, Downloading and Development of
             <abbr class="no-underline" title="Hypertext Preprocessor">PHP</abbr>
             extensions.
@@ -239,19 +262,19 @@
       </article>
     </main>
 
-    <footer class="bg-purple-900 text-white grid grid-cols-3 items-center">
-      <div>
+    <footer class="bg-purple-900 text-white grid md:grid-cols-3 items-center">
+      <div class="justify-self-center md:justify-self-start">
         <a
-          class="text-blue-500 hover:text-blue-300 underline"
+          class="text-blue-500 hover:text-blue-300 underline w-full md:w-auto text-center"
           href="https://pecl.php.net/copyright.php"
           >Copyright © 2001-2024 The
           <abbr class="no-underline" title="Hypertext Preprocessor">PHP</abbr>
           Group</a
         >
-        <p>All rights reserved.</p>
+        <p class="w-full md:w-auto text-center">All rights reserved.</p>
       </div>
 
-      <div class="justify-self-center">
+      <div class="hidden md:flex justify-self-center">
         <a
           class="text-blue-500 hover:text-blue-300 underline"
           href="https://pecl.php.net/about/privacy.php"
@@ -267,7 +290,7 @@
         >
       </div>
 
-      <div class="justify-self-end">
+      <div class="hidden md:grid justify-self-end">
         <p>
           Last updated: Mon Jun 01 07:05:01 2020 UTC<br />
           Bandwidth and hardware provided by:
@@ -279,6 +302,7 @@
         </p>
       </div>
     </footer>
+
     <script src="./AfterSrc/script.js"></script>
   </body>
 </html>

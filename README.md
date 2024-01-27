@@ -10,7 +10,8 @@
 6. Removal of useless elements on screen
 7. Proper grouping of content
 8. Titles for Abbrivations
-9.
+9. Responsiveness
+10. Remove Specialized Language
 
 ### Improvements made to the existing interface:
 

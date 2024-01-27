@@ -104,3 +104,10 @@ ul li ul.dropdown li {
 ul li:hover ul.dropdown {
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "article";
+  }
+}

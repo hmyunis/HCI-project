@@ -6,249 +6,250 @@
     <title>PECL :: The PHP Extension Community Library</title>
     <link rel="shortcut icon" href="https://pecl.php.net/favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./AfterSrc/styles.css" />
   </head>
-  <body>
-    <header>
-      <div>
-        <a href="https://pecl.php.net/"
-          ><img
-            src="./PECL __ The PHP Extension Community Library_files/peclsmall.gif"
-            alt="PECL :: The PHP Extension Community Library"
-            width="106"
-            height="55"
-            style="margin: 5px"
-        /></a>
-      </div>
-
-      <form>
-        <a href="https://pecl.php.net/login.php" class="menuBlack">Login</a>
-
-        &nbsp;|&nbsp;
-        <a href="https://pecl.php.net/packages.php" class="menuBlack"
-          >Packages</a
-        >
-        &nbsp;|&nbsp;
-        <a href="https://pecl.php.net/support.php" class="menuBlack">Support</a>
-        &nbsp;|&nbsp;
-        <a href="https://pecl.php.net/bugs/" class="menuBlack">Bugs</a>
-      </form>
-
-      <div>
-        <ul class="side_pages">
-          <li class="side_page">
-            <a href="https://pecl.php.net/" style="font-weight: bold">Home</a>
-          </li>
-          <li class="side_page">
-            <a href="https://pecl.php.net/news/">News</a>
-          </li>
-        </ul>
-
-        <strong>Documentation:</strong>
-
-        <ul class="side_pages">
-          <li class="side_page">
-            <a href="https://pecl.php.net/support.php">Support</a>
-          </li>
-        </ul>
-
-        <strong>Downloads:</strong>
-
-        <ul class="side_pages">
-          <li class="side_page">
-            <a href="https://pecl.php.net/packages.php">Browse Packages</a>
-          </li>
-
-          <li class="side_page">
-            <a href="https://pecl.php.net/package-search.php"
-              >Search Packages</a
-            >
-          </li>
-
-          <li class="side_page">
-            <a href="https://pecl.php.net/package-stats.php"
-              >Download Statistics</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3><a href="https://pecl.php.net/news/">News</a></h3>
-        <h3>Documentation</h3>
-
-        <div class="indent">
-          <a href="https://pecl.php.net/doc/index.php" class="item"
-            >PECL specific docs</a
-          ><br />
-          <a href="https://pecl.php.net/support.php" class="item"
-            >Mailing Lists &amp; Support Resources</a
-          ><br />
+  <body class="h-screen">
+    <header class="bg-purple-900 text-white">
+      <nav class="flex">
+        <div>
+          <a href="https://pecl.php.net/"
+            ><img
+              src="./PECL __ The PHP Extension Community Library_files/peclsmall.gif"
+              alt="PECL :: The PHP Extension Community Library"
+              width="106"
+              height="55"
+              style="margin: 5px"
+          /></a>
         </div>
 
-        <h3>Downloads</h3>
+        <ul>
+          <li class="blockRelatives">
+            <a class="blockCentralA" href="https://pecl.php.net/">Home</a>
+          </li>
 
-        <div class="indent">
-          <a href="https://pecl.php.net/packages.php" class="item"
-            >Browse All Packages</a
-          ><br />
-          <a href="https://pecl.php.net/package-search.php" class="item"
-            >Search Packages</a
-          ><br />
-          <a href="https://pecl.php.net/package-stats.php" class="item"
-            >Download Statistics</a
-          ><br />
-        </div>
+          <li class="blockRelatives">
+            <a
+              class="dropdownLinks flex items-center gap-2"
+              href="https://pecl.php.net/news/"
+              >News Section
+              <img class="w-3" src="./AfterSrc/images/dropdown.png" alt="..."
+            /></a>
+            <ul class="dropdown">
+              <li class="blockRelatives">
+                <a
+                  class="blockCentralA"
+                  href="https://pecl.php.net/doc/index.php"
+                  >Document</a
+                >
+              </li>
+              <li class="blockRelatives">
+                <a
+                  class="blockCentralA"
+                  href="https://pecl.php.net/package-stats.php"
+                  >Status</a
+                >
+              </li>
+            </ul>
+          </li>
 
-        <a href="https://pecl.php.net/account-request.php" class="item"
-          >I want to publish my PHP Extension in PECL</a
+          <li class="blockRelatives">
+            <a
+              class="dropdownLinks flex items-center gap-2"
+              href="https://pecl.php.net/packages.php"
+              >Packages
+              <img class="w-3" src="./AfterSrc/images/dropdown.png" alt="..."
+            /></a>
+            <ul class="dropdown">
+              <li class="blockRelatives">
+                <a
+                  class="blockCentralA"
+                  href="https://pecl.php.net/packages.php"
+                  >All</a
+                >
+              </li>
+              <li class="blockRelatives">
+                <a
+                  class="blockCentralA"
+                  href="https://pecl.php.net/account-request.php"
+                  >Add</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="blockRelatives">
+            <a class="blockCentralA" href="https://pecl.php.net/support.php"
+              >Support</a
+            >
+          </li>
+          <li class="blockRelatives">
+            <a class="blockCentralA" href="https://pecl.php.net/bugs/">Bugs</a>
+          </li>
+        </ul>
+
+        <button
+          class="flex mt-[10px] text-[20px] absolute right-4 border-2 rounded-full w-[100px] grid justify-center items-center hover:bg-purple-300 hover:text-black"
         >
-      </div>
+          <a href="https://pecl.php.net/login.php">Login</a>
+        </button>
+      </nav>
     </header>
 
-    <aside>
-      <strong>Recent&nbsp;Releases:</strong>
-
-      <table class="sidebar-releases">
-        <tbody>
-          <tr>
-            <td valign="top">
-              <a href="https://pecl.php.net/package/datadog_trace/">
-                datadog_trace 0.97.0 </a
-              ><br />
-              <i>2024-01-18:</i>
-              ## Tracer ### Added - Add span links cap...
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <a href="https://pecl.php.net/package/zstd/"> zstd 0.13.2 </a
-              ><br />
-              <i>2024-01-15:</i>
-              - fix: variable declaration
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <a href="https://pecl.php.net/package/solr/"> solr 2.7.0 </a
-              ><br />
-              <i>2024-01-11:</i>
-              Features: - Support Highlight Query (#28...
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <a href="https://pecl.php.net/package/protobuf/">
-                protobuf 3.25.2 </a
-              ><br />
-              <i>2024-01-10:</i>
-              * See github.com/protocolbuffers/protobu...
-            </td>
-          </tr>
-          <tr>
-            <td valign="top">
-              <a href="https://pecl.php.net/package/phalcon/"> phalcon 5.6.0 </a
-              ><br />
-              <i>2024-01-09:</i>
-              Full changelog can be found at: https://...
-            </td>
-          </tr>
-
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="right">
-              <a href="https://pecl.php.net/feeds/">Syndicate this</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </aside>
-
     <main>
-      <form method="post" action="https://pecl.php.net/search.php">
-        <p class="head-search">
-          <span class="accesskey">S</span>earch for
-          <input
-            class="small"
-            type="text"
-            name="search_string"
-            value=""
-            size="20"
-            accesskey="s"
-          />
-          in the
-          <select name="search_in" class="small">
-            <option value="packages">Packages</option>
-            <option value="site">This site (using Google)</option>
-            <option value="developers">Developers</option>
-            <option value="pecl-dev">Developer mailing list</option>
-            <option value="pecl-cvs">SVN commits mailing list</option>
-          </select>
-          <input
-            type="image"
-            src="./PECL __ The PHP Extension Community Library_files/small_submit_white.gif"
-            alt="search"
-            style="vertical-align: middle"
-          />
-        </p>
-      </form>
+      <aside class="bg-gray-300 grid items-center">
+        <ul class="grid gap-2 m-3">
+          <li class="text-center text-[20px] font-bold underline">
+            Recent Releases
+          </li>
+          <li>
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/package/datadog_trace/"
+            >
+              datadog_trace 0.97.0
+            </a>
+            <i>2024-01-18:</i>
+            ## Tracer ### Added - Add span links cap...
+          </li>
 
-      <div>
-        <h3>What is PECL?</h3>
+          <li>
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/package/zstd/"
+            >
+              zstd 0.13.2
+            </a>
+            <i>2024-01-15:</i>
+            - fix: variable declaration
+          </li>
 
-        <p>
-          <acronym title="PHP Extension Community Library">PECL</acronym> is a
-          repository for PHP Extensions, providing a directory of all known
-          extensions and hosting facilities for downloading and development of
-          PHP extensions.
-        </p>
+          <li>
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/package/solr/"
+            >
+              solr 2.7.0
+            </a>
+            <i>2024-01-11:</i>
+            Features: - Support Highlight Query #28...
+          </li>
 
-        <p>
-          The packaging and distribution system used by PECL is shared with its
-          sister,
-          <acronym title="PHP Extension and Application Repository"
-            >PEAR</acronym
-          >.
-        </p>
-      </div>
+          <li>
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/package/protobuf/"
+            >
+              protobuf 3.25.2
+            </a>
+            <i>2024-01-10:</i>
+            * See github.com/protocolbuffers/protobu...
+          </li>
+
+          <li>
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/package/phalcon/"
+            >
+              phalcon 5.6.0
+            </a>
+            <i>2024-01-09:</i>
+            Full changelog can be found at: https://...
+          </li>
+
+          <li class="pt-7">
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/feeds/"
+              >Syndicate this</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <article class="grid items-center">
+        <div class="grid bg-blue-100 self-start py-5">
+          <h1 class="text-[40px] text-center font-bold">
+            Finding, Downloading and Development of PHT extensions.
+          </h1>
+          <form class="justify-self-center py-2 w-1/2">
+            <input
+              class="p-3 w-full border-2 border-gray-500"
+              type="text"
+              placeholder="Search Packages"
+            />
+          </form>
+          <p class="text-center">
+            Or
+            <a
+              class="text-blue-500 underline"
+              href="https://pecl.php.net/packages.php"
+              >Browse Packages</a
+            >
+          </p>
+        </div>
+
+        <section class="bg-white">
+          <h2 class="font-bold text-[20] underline" id="title1">
+            <abbr title="PHP Extension Community Library">PECL</abbr> a
+            repository for PHP Extensions
+          </h2>
+          <div id="image1">
+            <img
+              src="./PECL __ The PHP Extension Community Library_files/peclsmall.gif"
+              alt="PECL :: The PHP Extension Community Library"
+              width="106"
+              height="55"
+              style="margin: 5px"
+            />
+          </div>
+          <p id="textitem1">
+            It provides a directory of all known extensions and hosting
+            facilities for downloading and development of PHP extensions.
+          </p>
+          <p id="textitem2">
+            The packaging and distribution system used by PECL is shared with
+            the sister,
+            <abbr title="PHP Extension and Application Repository">PEAR</abbr>
+          </p>
+        </section>
+      </article>
     </main>
 
-    <footer>
+    <footer class="bg-purple-900 text-white grid grid-cols-3">
       <div>
-        <tbody>
-          <tr>
-            <td class="foot-bar" colspan="2">
-              <a href="https://pecl.php.net/about/privacy.php" class="menuBlack"
-                >PRIVACY POLICY</a
-              >
-              &nbsp;|&nbsp;
-              <a href="https://pecl.php.net/credits.php" class="menuBlack"
-                >CREDITS</a
-              >
-              <br />
-            </td>
-          </tr>
+        <a
+          class="text-blue-500 underline"
+          href="https://pecl.php.net/copyright.php"
+          >Copyright © 2001-2024 The PHP Group</a
+        >
+        <p>All rights reserved.</p>
+      </div>
 
-          <tr>
-            <td class="foot-copy">
-              <small>
-                <a href="https://pecl.php.net/copyright.php"
-                  >Copyright © 2001-2024 The PHP Group</a
-                ><br />
-                All rights reserved.<br />
-              </small>
-            </td>
-            <td class="foot-source">
-              <small>
-                Last updated: Mon Jun 01 07:05:01 2020 UTC<br />
-                Bandwidth and hardware provided by:
-                <a href="https://www.pair.com/">pair Networks</a>
-              </small>
-            </td>
-          </tr>
-        </tbody>
+      <div>
+        <a
+          class="text-blue-500 underline"
+          href="https://pecl.php.net/about/privacy.php"
+          class="menuBlack"
+          >PRIVACY POLICY</a
+        >
+        &nbsp;|&nbsp;
+        <a
+          class="text-blue-500 underline"
+          href="https://pecl.php.net/credits.php"
+          class="menuBlack"
+          >CREDITS</a
+        >
+      </div>
+
+      <div>
+        <p>
+          Last updated: Mon Jun 01 07:05:01 2020 UTC<br />
+          Bandwidth and hardware provided by:
+          <a class="text-blue-500 underline" href="https://www.pair.com/"
+            >pair Networks</a
+          >
+        </p>
       </div>
     </footer>
+    <script src="./AfterSrc/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,14 @@
 # HCI Project: Interface Redesign
 
+### Accomplished
+
+1. User navigation improved through the menu-bar
+2. Proper focus on user needs
+3. Design consistancy for the links
+4. Correction to the sidbar
+5. Larg and distinct fonts
+6. Removal of useless elements on screen
+
 ### Improvements made to the existing interface:
 
 1. Proper menu bar to help separate navigation and content
@@ -14,6 +23,7 @@
 10. Wrong use of Abrivations
 
 ### Re-worded the above points using UI design terminologies (Points after 9 are new, also the above point 9 has been removed - specialized lang.)
+
 Enhancements to the Existing Interface:
 
 1. Implemented a well-structured menu bar to clearly distinguish between navigation and content areas, enhancing overall user navigation.

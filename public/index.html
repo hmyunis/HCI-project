@@ -1,454 +1,775 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pecl</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/documentationCards.css">
-    <link rel="stylesheet" href="css/releasesCarousel.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/documentationCards.css" />
+    <link rel="stylesheet" href="css/releasesCarousel.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/fe3d3f96be.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-</head>
-<body class="font-['Raleway']">
+    <script
+      src="https://kit.fontawesome.com/fe3d3f96be.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-['Raleway']">
     <header class="fixed w-full top-0 z-10 bg-indigo-400">
-        <div><img class="w-14 fixed ml-3 mt-1 hover:scale-110 transition-transform cursor-pointer" src="images/logo.png" alt="PECL Logo"></div>
-        <div class="flex justify-end p-5">
-            <nav>
-                <ul class="flex gap-4 font-semibold">
-                    <li class="hover:scale-110 transition-all"><a
-                        class="rounded-3xl px-4 py-2 bg-purple-400 hover:text-purple-800 text-black font-semibold hover:shadow-inner hover:shadow-white hover:bg-purple-300 transition-all"
-                        href=""
-                        >Log In</a
-                    ></li>
-                    <li class="hover:scale-110 transition-all hover:text-purple-600"><a href="">Packages</a></li>
-                    <li class="hover:scale-110 transition-all hover:text-purple-600"><a href="">Support</a></li>
-                    <li class="hover:scale-110 transition-all hover:text-purple-600"><a href="">Bugs</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="bg-violet-800 flex justify-end items-center text-black">
-            <input type="search" class="my-1 focus:outline-purple-600 rounded focus:shadow text-black focus:bg-purple-100 focus:shadow-purple-500 px-2 py-1" placeholder="Search for..." name="" id="">
-            <span class="text-xl text-white mx-2 block">in the</span>
-            <select class="rounded bg-purple-100 py-1 font-semibold" name="" id="">
-                <option selected value="">Packages</option>
-                <option value="">This site (using Google)</option>
-                <option value="">Developers</option>
-                <option value="">Developer mailing list</option>
-                <option value="">SVN commits mailing list</option>
-            </select>
-            <button class="rounded-xl mx-1 px-4 py-2 bg-purple-400 hover:text-purple-800 hover:rounded-full font-semibold hover:shadow-inner hover:shadow-white hover:bg-purple-300 transition-all"
-            >Go!</button>
-        </div>
+      <div>
+        <img
+          class="w-14 fixed ml-3 mt-1 hover:scale-110 transition-transform cursor-pointer"
+          src="images/logo.png"
+          alt="PECL Logo"
+        />
+      </div>
+      <div class="flex justify-end p-5">
+        <nav>
+          <ul class="flex gap-4 font-semibold">
+            <li class="hover:scale-110 transition-all">
+              <a
+                class="rounded-3xl px-4 py-2 bg-purple-400 hover:text-purple-800 text-black font-semibold hover:shadow-inner hover:shadow-white hover:bg-purple-300 transition-all"
+                href=""
+                >Log In</a
+              >
+            </li>
+            <li class="hover:scale-110 transition-all hover:text-purple-600">
+              <a href="">Packages</a>
+            </li>
+            <li class="hover:scale-110 transition-all hover:text-purple-600">
+              <a href="">Support</a>
+            </li>
+            <li class="hover:scale-110 transition-all hover:text-purple-600">
+              <a href="">Bugs</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bg-violet-800 flex justify-end items-center text-black">
+        <input
+          type="search"
+          class="my-1 focus:outline-purple-600 rounded focus:shadow text-black focus:bg-purple-100 focus:shadow-purple-500 px-2 py-1"
+          placeholder="Search for..."
+          name=""
+          id=""
+        />
+        <span class="text-xl text-white mx-2 block">in the</span>
+        <select class="rounded bg-purple-100 py-1 font-semibold" name="" id="">
+          <option selected value="">Packages</option>
+          <option value="">This site (using Google)</option>
+          <option value="">Developers</option>
+          <option value="">Developer mailing list</option>
+          <option value="">SVN commits mailing list</option>
+        </select>
+        <button
+          class="rounded-xl mx-1 px-4 py-2 bg-purple-400 hover:text-purple-800 hover:rounded-full font-semibold hover:shadow-inner hover:shadow-white hover:bg-purple-300 transition-all"
+        >
+          Go!
+        </button>
+      </div>
     </header>
     <main class="">
-        <section class="flex flex-col justify-center items-center bg-[url('images/intro-bg.svg')] bg-no-repeat bg-center bg-fixed bg-cover h-screen">
-            <h1 class="text-4xl text-center font-bold text-purple-900 p-28 pb-16">Dive into the PHP Ecosystem with PECL - Your Go-To Hub for Exploring, Downloading, and Developing a Universe of Extensions!</h1>
-            <a
-                onclick="document.getElementById('get-started-btn').classList.toggle('animate-bounce')"
-                id="get-started-btn"
-                href="#start"
-                class="text-2xl rounded-full px-8 py-4 border-2 bg-purple-500 text-white animate-bounce block w-fit font-semibold hover:shadow-inner hover:shadow-white hover:text-xl hover:bg-purple-700 transition-all"
-                >Get Started</a
+      <section
+        class="flex flex-col justify-center items-center bg-[url('images/intro-bg.svg')] bg-no-repeat bg-center bg-fixed bg-cover h-screen"
+      >
+        <h1 class="text-4xl text-center font-bold text-purple-900 p-28 pb-16">
+          Dive into the PHP Ecosystem with PECL - Your Go-To Hub for Exploring,
+          Downloading, and Developing a Universe of Extensions!
+        </h1>
+        <a
+          onclick="document.getElementById('get-started-btn').classList.toggle('animate-bounce')"
+          id="get-started-btn"
+          href="#start"
+          class="text-2xl rounded-full px-8 py-4 border-2 bg-purple-500 text-white animate-bounce block w-fit font-semibold hover:shadow-inner hover:shadow-white hover:text-xl hover:bg-purple-700 transition-all"
+          >Get Started</a
+        >
+      </section>
+      <section class="min-h-screen bg-violet-400">
+        <h1 class="text-center font-semibold text-4xl py-10">Documentation</h1>
+        <div class="flex justify-around">
+          <a href="">
+            <div class="card">
+              <p class="card-title">PECL Specific Docs</p>
+              <p class="small-desc">
+                Dive deep into the heart of PECL with our specific
+                documentation. Unleash the full potential of PHP extensions by
+                exploring detailed guides, API references, and essential
+                resources tailored for seamless integration and development.
+              </p>
+              <div class="go-corner">
+                <div class="go-arrow">→</div>
+              </div>
+            </div>
+          </a>
+          <a href="">
+            <div class="card">
+              <p class="card-title">Mailing Lists and Support Resources</p>
+              <p class="small-desc">
+                Join a vibrant community of developers on our mailing lists and
+                access a wealth of support resources. Engage with experts, seek
+                assistance, and stay updated on the latest developments to
+                enhance your PECL and PHP experience.
+              </p>
+              <div class="go-corner">
+                <div class="go-arrow">→</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div id="carousel-section" class="pb-24">
+          <h1 class="ml-10 text-4xl font-semibold py-10">Recent Releases</h1>
+          <div class="slider rounded-xl bg-violet-300 py-5">
+            <div class="slide-track">
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
                 >
-        </section>
-        <section class="min-h-screen bg-violet-400">
-            <h1 class="text-center font-semibold text-4xl py-10">Documentation</h1>
-            <div class="flex justify-around">
-                <a href="">
-                    <div class="card">
-                        <p class="card-title">PECL Specific Docs</p>
-                        <p class="small-desc">
-                            Dive deep into the heart of PECL with our specific documentation. Unleash the full potential of PHP extensions by exploring detailed guides, API references, and essential resources tailored for seamless integration and development.
-                        </p>
-                        <div class="go-corner">
-                          <div class="go-arrow">→</div>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="card">
-                        <p class="card-title">Mailing Lists and Support Resources</p>
-                        <p class="small-desc">
-                            Join a vibrant community of developers on our mailing lists and access a wealth of support resources. Engage with experts, seek assistance, and stay updated on the latest developments to enhance your PECL and PHP experience.                        </p>
-                        <div class="go-corner">
-                          <div class="go-arrow">→</div>
-                        </div>
-                    </div>
-                </a>
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div
+                  class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md"
+                >
+                  <div class="col-span-2 text-lg font-bold rounded-md">
+                    gRPC 1.61.0RC3
+                  </div>
+                  <div class="col-span-2 rounded-md">
+                    <h2>gRPC Core 1.61.0 update</h2>
+                    <h3 class="italic">2024-02-03</h3>
+                  </div>
+                  <div class="col-span-1">
+                    <button
+                      class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-external-link"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="carousel-section" class="pb-24">
-                <h1 class="ml-10 text-4xl font-semibold py-10">Recent Releases</h1>
-                <div class="slider rounded-xl bg-violet-300 py-5">
-                    <div class="slide-track">
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                  <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                      <polyline points="15 3 21 3 21 9"></polyline>
-                                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                  </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="w-60 bg-gradient-to-l from-slate-300 to-slate-100 text-slate-600 border border-slate-300 grid grid-col-2 justify-center p-4 gap-4 rounded-lg shadow-md">
-                                <div class="col-span-2 text-lg font-bold rounded-md">
-                                    gRPC 1.61.0RC3
-                                </div>
-                                <div class="col-span-2 rounded-md">
-                                    <h2>gRPC Core 1.61.0 update</h2>
-                                    <h3 class="italic">2024-02-03</h3>
-                                </div>
-                                <div class="col-span-1">
-                                    <button class="rounded-md bg-slate-300 hover:bg-slate-600 hover:text-slate-200 duration-300 p-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="h-screen bg-violet-500 font-light" id="start">
-            <h1 class="text-5xl text-center py-10">Downloads</h1>
-            <div class="flex gap-4 justify-center">
-                <div class="rounded-3xl bg-violet-400 hover:text-violet-900 cursor-pointer hover:-translate-y-2 transition-all duration-500 shadow-xl shadow-purple-900 border-2 w-[31vw] h-[25rem]">
-                    <img src="images/browse-icon.png" alt="Browse Icon" class="w-24 my-5 block mx-auto">
-                    <hgroup class="text-center px-5">
-                        <h2 class="text-3xl font-semibold">Browse Packages</h2>
-                        <p class="text-xl my-3 leading-6">Explore a vast collection of PHP extensions tailored to meet your development needs. Discover innovative solutions, utilities, and enhancements to elevate your projects.</p>
-                    </hgroup>
-                    <a href="">
-                        <button class="mx-auto block px-8 py-2 rounded-3xl hover:border-none border-2 border-purple-800 bg-purple-200 hover:text-white font-semibold text-xl text-black my-3 items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-purple-600 before:to-purple-700 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0">
-                            Browse<i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="rounded-3xl bg-violet-400 hover:text-violet-900 cursor-pointer hover:-translate-y-2 transition-all duration-500 shadow-xl shadow-purple-900 border-2 w-[31vw] h-[25rem]">
-                    <img src="images/search-icon.png" alt="Search Icon" class="w-24 my-5 block mx-auto">
-                    <hgroup class="text-center px-5">
-                        <h2 class="text-3xl font-semibold">Search Packages</h2>
-                        <p class="text-xl my-3 leading-6">Streamline your search for the perfect PHP extension. Effortlessly find and filter through an extensive library of packages, ensuring you get exactly what you need.</p>
-                    </hgroup>
-                    <a href="">
-                        <button class="mx-auto block px-8 py-2 rounded-3xl hover:border-none border-2 border-purple-800 bg-purple-200 hover:text-white font-semibold text-xl text-black my-3 items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-purple-600 before:to-purple-700 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0">
-                            Search Page<i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </button>
-                    </a>
-                </div>
-                <div class="rounded-3xl bg-violet-400 hover:text-violet-900 cursor-pointer hover:-translate-y-2 transition-all duration-500 shadow-xl shadow-purple-900 border-2 w-[31vw] h-[25rem]">
-                    <img src="images/statistics-icon.png" alt="Download Statistics Icon" class="w-24 my-5 block mx-auto">
-                    <hgroup class="text-center px-5">
-                        <h2 class="text-3xl font-semibold">Download Statistics</h2>
-                        <p class="text-xl my-3 leading-6">Stay informed and make informed decisions with our comprehensive download statistics. Track the popularity and performance of PHP extensions.</p>
-                    </hgroup>
-                    <a href="">
-                        <button class="mx-auto block px-8 py-2 rounded-3xl hover:border-none border-2 border-purple-800 bg-purple-200 hover:text-white font-semibold text-xl text-black my-3 items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-purple-600 before:to-purple-700 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0">
-                            Download<i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </button>
-                    </a>
-                </div>
-
-            </div>
-
-        </section>
-        
+          </div>
+        </div>
+      </section>
+      <section class="h-screen bg-violet-500 font-light" id="start">
+        <h1 class="text-5xl text-center py-10">Downloads</h1>
+        <div class="flex gap-10 justify-center">
+          <div
+            class="rounded-xl bg-violet-400 cursor-pointer transition-all duration-500 shadow-lg shadow-purple-900 w-[29vw] h-[25rem]"
+          >
+            <img
+              src="images/browse-icon.png"
+              alt="Browse Icon"
+              class="w-24 my-5 block mx-auto"
+            />
+            <hgroup class="text-center px-5">
+              <h2 class="text-xl font-semibold">Browse Packages</h2>
+              <p class="text-md my-3 leading-6">
+                Explore a vast collection of PHP extensions tailored to meet
+                your development needs. Discover innovative solutions,
+                utilities, and enhancements to elevate your projects.
+              </p>
+            </hgroup>
+            <a href="">
+              <button
+                class="mx-auto block px-8 py-2 rounded-3xl hover:border-none border-purple-800 bg-purple-200 hover:text-white font-semibold text-xl text-black my-3 items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-purple-600 before:to-purple-700 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0"
+              >
+                Browse<i
+                  class="fa-solid fa-arrow-up-right-from-square ml-2"
+                ></i>
+              </button>
+            </a>
+          </div>
+          <div
+            class="rounded-xl bg-violet-400 cursor-pointer transition-all duration-500 shadow-lg shadow-purple-900 w-[29vw] h-[25rem]"
+          >
+            <img
+              src="images/search-icon.png"
+              alt="Search Icon"
+              class="w-24 my-5 block mx-auto"
+            />
+            <hgroup class="text-center px-5">
+              <h2 class="text-xl font-semibold">Search Packages</h2>
+              <p class="text-md my-3 leading-6">
+                Streamline your search for the perfect PHP extension.
+                Effortlessly find and filter through an extensive library of
+                packages, ensuring you get exactly what you need.
+              </p>
+            </hgroup>
+            <a href="">
+              <button
+                class="mx-auto block px-8 py-2 rounded-3xl hover:border-none border-purple-800 bg-purple-200 hover:text-white font-semibold text-xl text-black my-3 items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-purple-600 before:to-purple-700 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0"
+              >
+                Search Page<i
+                  class="fa-solid fa-arrow-up-right-from-square ml-2"
+                ></i>
+              </button>
+            </a>
+          </div>
+          <div
+            class="rounded-xl bg-violet-400 cursor-pointer transition-all duration-500 shadow-lg shadow-purple-900 w-[29vw] h-[25rem]"
+          >
+            <img
+              src="images/statistics-icon.png"
+              alt="Download Statistics Icon"
+              class="w-24 my-5 block mx-auto"
+            />
+            <hgroup class="text-center px-5">
+              <h2 class="text-xl font-semibold">Download Statistics</h2>
+              <p class="text-md my-3 leading-6">
+                Stay informed and make informed decisions with our comprehensive
+                download statistics. Track the popularity and performance of PHP
+                extensions.
+              </p>
+            </hgroup>
+            <a href="">
+              <button
+                class="mx-auto block px-8 py-2 rounded-3xl hover:border-none border-purple-800 bg-purple-200 hover:text-white font-semibold text-xl text-black my-3 items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-purple-600 before:to-purple-700 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0"
+              >
+                Download<i
+                  class="fa-solid fa-arrow-up-right-from-square ml-2"
+                ></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="bg-violet-950 text-white">
-        <div class="p-4 shadow-one flex flex-col gap-4">
-              <address class="flex flex-wrap justify-center gap-8 max-md:flex-col max-md:gap-0 max-md:items-center">
-                  <p class="hover:text-purple-300 hover:scale-110 transition-all duration-500 max-md:w-full">
-                      <i class="fa-solid fa-phone"></i>
-                      <a href="#">+251 912 345 678</a>
-                  </p>
-                  <p class="hover:text-purple-300 hover:scale-110 transition-all duration-500 max-md:w-full">
-                      <i class="fa-solid fa-envelope"></i>
-                      <a href="mailto:hm456123@gmail.com"
-                          >pecl@gmail.com</a
-                      >
-                  </p>
-                  <p class="hover:text-purple-300 hover:scale-110 transition-all duration-500 max-md:w-full">
-                      <i class="fa-solid fa-location"></i>
-                      <a
-                        
-                          href="https://maps.app.goo.gl/XnbEU1CXgs9zGk3y7"
-                          >USA, Michigan Block 38</a
-                      >
-                  </p>
-              </address>
-  
-              <div class="flex justify-between">
-                  <a href="" class="hover:text-purple-300 hover:underline">
-                      Copyright &copy; 2001-2024 The PHP Group |
-                      All rights reserved.
-                  </a>
-                  <div class="flex gap-4 max-md:hidden">
-                      <a><i class="hover:scale-125 fa-brands fa-github"></i></a>
-                      <a><i class="hover:scale-125 fa-brands fa-telegram"></i></a>
-                      <a><i class="hover:scale-125 fa-brands fa-linkedin"></i></a>
-                      <a href="#">🔼</a>
-                  </div>
-              </div>
+      <div class="p-4 shadow-one flex flex-col gap-4">
+        <address
+          class="flex flex-wrap justify-center gap-8 max-md:flex-col max-md:gap-0 max-md:items-center"
+        >
+          <p
+            class="hover:text-purple-300 hover:scale-110 transition-all duration-500 max-md:w-full"
+          >
+            <i class="fa-solid fa-phone"></i>
+            <a href="#">+251 912 345 678</a>
+          </p>
+          <p
+            class="hover:text-purple-300 hover:scale-110 transition-all duration-500 max-md:w-full"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hm456123@gmail.com">pecl@gmail.com</a>
+          </p>
+          <p
+            class="hover:text-purple-300 hover:scale-110 transition-all duration-500 max-md:w-full"
+          >
+            <i class="fa-solid fa-location"></i>
+            <a href="https://maps.app.goo.gl/XnbEU1CXgs9zGk3y7"
+              >USA, Michigan Block 38</a
+            >
+          </p>
+        </address>
+
+        <div class="flex justify-between">
+          <a href="" class="hover:text-purple-300 hover:underline">
+            Copyright &copy; 2001-2024 The PHP Group | All rights reserved.
+          </a>
+          <div class="flex gap-4 max-md:hidden">
+            <a><i class="hover:scale-125 fa-brands fa-github"></i></a>
+            <a><i class="hover:scale-125 fa-brands fa-telegram"></i></a>
+            <a><i class="hover:scale-125 fa-brands fa-linkedin"></i></a>
+            <a href="#">🔼</a>
           </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

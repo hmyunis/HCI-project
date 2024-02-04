@@ -52,3 +52,7 @@
     /* height: 100px; */
     width: 250px;
 }
+
+.slide-track:hover {
+    animation-play-state: paused;
+}

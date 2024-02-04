@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PECL :: Bugs</title>
+    <title>PECL :: Login</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/glassyButton.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -60,49 +60,58 @@
     <main class="flex">
         <aside class="bg-violet-400 text-black min-h-screen w-[20vw]">
             <ul>
-                <a href="index.html"><li class="glassy-button text-purple-950">Home</li></a>
-                <a href="news.html"><li class="glassy-button text-purple-950">News</li></a>
-                <a href=""><li class="mt-5 font-semibold">Documentation:</li></a>
-                <a href="support.html"><li class="glassy-button text-purple-950">Support</li></a>
-                <a href=""><li class="mt-5 font-semibold">Downloads:</li></a>
-                <a href="packages.html"><li class="glassy-button text-purple-950">Browse Packages</li></a>
-                <a href=""><li class="glassy-button text-purple-950">Search Packages</li></a>
-                <a href=""><li class="glassy-button text-purple-950">Download Statistics</li></a>
+                <a href="index.html">
+                    <li class="glassy-button text-purple-950">Home</li>
+                </a>
+                <a href="news.html">
+                    <li class="glassy-button text-purple-950">News</li>
+                </a>
+                <a href="">
+                    <li class="mt-5 font-semibold">Documentation:</li>
+                </a>
+                <a href="support.html">
+                    <li class="glassy-button text-purple-950">Support</li>
+                </a>
+                <a href="">
+                    <li class="mt-5 font-semibold">Downloads:</li>
+                </a>
+                <a href="packages.html">
+                    <li class="glassy-button text-purple-950">Browse Packages</li>
+                </a>
+                <a href="">
+                    <li class="glassy-button text-purple-950">Search Packages</li>
+                </a>
+                <a href="">
+                    <li class="glassy-button text-purple-950">Download Statistics</li>
+                </a>
             </ul>
         </aside>
         <article class="w-[80vw] bg-violet-200 min-h-screen p-10">
-            <h1 class="text-4xl">PECL Bug Tracking System</h1>
-            <p class="my-5">If you encounter any issues or need support, our team is here to help! Before reporting a bug, make sure to check our <a href="support.html" class="underline text-blue-700 hover:text-blue-500">support channels</a> for assistance.</p>
-            <h2 class="text-3xl mb-3">Before Reporting a Bug</h2>
-            <ol class="list-decimal">
-                <li>
-                    <h3 class="font-semibold"><a href="" class="hover:text-purple-800" target="_blank">Search Existing Bugs <sup><i class="text-sm fa-solid fa-arrow-up-right-from-square"></i></sup></a>:</h3>
-                    <p>Make sure the issue hasn't been reported before by searching our existing bugs. This helps avoid duplicate reports and speeds up the resolution process.</p>
-                </li>
-                <li>
-                    <h3 class="font-semibold"><a href="" class="hover:text-purple-800" target="_blank">Read Bug Reporting Tips <sup><i class="text-sm fa-solid fa-arrow-up-right-from-square"></i></sup></a>:</h3>
-                    <p>Familiarize yourself with our bug reporting tips to provide clear and helpful information. This ensures that others can easily understand and assist with the issue.</p>
-                </li>
-            </ol>
-            <h2 class="text-3xl mt-5 mb-3">Ready to Report?</h2>
-            <p>Follow these steps based on your situation:</p>
-            <ul>
-                <li>
-                    <h3 class="font-semibold">For Package-Specific Bugs:</h3>
-                    <p>Visit the package home page using the <a href="packages.html" class="underline text-blue-700 hover:text-blue-500">Browse Packages</a> or the package search system. Report the bug directly from the package page.</p>
-                </li>
-                <li>
-                    <h3 class="font-semibold">For Non-Package Issues:</h3>
-                    <p>If the bug doesn't relate to a specific PECL package, choose an appropriate category:</p>
-                    <ul class="list-disc ml-10">
-                        <li><a href="" class="underline text-blue-700 hover:text-blue-500">Website Problem</a></li>
-                        <li><a href="" class="underline text-blue-700 hover:text-blue-500">Documentation Problem</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <h2 class="text-3xl mt-5 mb-3">Explore Bug Statistics</h2>
-            <p>For additional insights, check out our <a href="" class="underline text-blue-700 hover:text-blue-500">bug statistics</a> page. It provides interesting data related to reported issues.</p>
-            <p>Thank you for contributing to the improvement of <a href="index.html" class="text-blue-800">PECL</a>! Your bug reports help us enhance the overall experience for our users.</p>
+            <div class="flex justify-center items-center">
+                <div class="w-1/2 h-[25rem] p-10 rounded-xl text-white bg-violet-800">
+                    <div class="rounded w-fit"><img src="images/logo.gif" alt="Logo"></div>
+                    <h1 class="text-center mb-5 text-3xl font-semibold">Login</h1>
+                    <form class="flex flex-col gap-2 px-16">
+                        <input type="text" required placeholder="Username" autofocus
+                            class="w-full px-2 py-2 border rounded focus:outline-slate-500 focus:shadow-outline text-black" />
+                        <input type="password" required placeholder="Password" minlength="8" maxlength="32"
+                            class="w-full px-2 py-2 border rounded focus:outline-slate-500 focus:shadow-outline transition duration-300 text-black" />
+                        <div>
+                            <input type="checkbox">
+                            <label> Remember Me</label>
+                        </div>
+                        <button type="submit"
+                            class="mx-auto w-fit block px-8 py-2 rounded-3xl hover:border-none border-purple-800 bg-purple-200 font-semibold text-black items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-blue-200 before:to-blue-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0">
+                            Log in
+                        </button>
+                    </form>
+                    <p class="text-center pt-10">Don't have an account? <a href=""
+                            class="text-blue-400 underline hover:text-blue-200">Sign up</a></p>
+                </div>
+            </div>
+            <p class="mt-10"><span class="font-semibold">Note: </span>If you just want to browse the website, you will not
+                need to log in. For all tasks that require authentication, you will be redirected to this form
+                automatically.</p>
         </article>
     </main>
     <footer class="bg-violet-900 text-white">

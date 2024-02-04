@@ -12,6 +12,7 @@
 8. Aesthetics (color monochromatics)
 9. Better user control (sort options)
 10. Incomprehensable Components (GO! next to search)
+11. Easy to understand (Bugs page)
 
 ### Improvements made to the existing interface:
 
